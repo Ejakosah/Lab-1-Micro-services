@@ -1,6 +1,9 @@
 # Lab-1
+
 Microservice Architecture
+
 Spring 2026
+
 Lab 1 Introduction to containerize a microservice example – using Docker Container
 
 
