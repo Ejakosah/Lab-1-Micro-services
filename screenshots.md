@@ -4,7 +4,15 @@ Microservice Architecture
 
 Spring 2026
 
-Lab 1 Introduction to containerize a microservice example – using Docker Container
+Lab 1 Introduction to containerizing a microservice example – using Docker Container
+
+Summary
+
+Containers are really useful for microservices because they package an application with everything it needs to run. This makes it easy to run the app anywhere, keep it consistent across environments, isolate it from other services, and scale it independently. However, just putting an app in a container does not automatically make it a microservice. Microservices are about how an application is designed. A real microservice focuses on one task, is loosely connected to other services, and can be deployed on its own. Containers make it easier to do these things, but you still have to design the app with microservice principles in mind.
+
+During Lab 1, I ran into a few issues. I had to replace the placeholder region with the correct one, us-east4, in all commands. The project ID in my image tag was wrong at first, which caused permission errors, so I fixed it by checking the active project and updating the tag. I also had to enable the Cloud Build API before I could build the image. There were permission problems when pushing the image, which were fixed by making sure Cloud Build used the right service account. At one point the build was marked as cancelled because I interrupted it too early, so I reran it and let it finish. Finally, I tested the image in a fresh environment by removing all local containers and images, pulling the image from Artifact Registry, running it, and checking the output with curl. The app returned “hello class, I’m trying to learn,” confirming it worked.
+
+This lab showed me how containers make it easier to deploy and run applications in the cloud and taught me how to troubleshoot common issues with builds, permissions, and images. It also helped me understand that containers are a tool to support microservices, but they don’t automatically make an app a microservice.
 
 
 <img width="1905" height="848" alt="Screenshot 2026-01-15 192935" src="https://github.com/user-attachments/assets/d7b8def8-dcc8-4574-9788-1bfb147c0e39" />
